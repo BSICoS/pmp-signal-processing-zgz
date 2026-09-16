@@ -1,4 +1,4 @@
-# pmpt1 — T1 (follow-up) cohort pipeline
+# pmpt1 — T1 cohort pipeline
 
 Structured pipeline for the T1 cohort, organised around **dataset versions**
 and a `data/` tree (created by the scripts, not committed):
