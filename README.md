@@ -46,7 +46,7 @@ MATLAB post-processing.
 ## Data (important)
 
 - **No raw recordings are stored in this repo.** Signals contain subject data
-  and live on the group NAS / OneDrive folders (`.gitignore` blocks `*.mat`,
+  and live on the group NAS  (`.gitignore` blocks `*.mat`,
   `*.csv`, `*.edf`, `data/`, …).
 - **Machine-specific paths are centralized in `paths.m`** (not committed):
   copy [paths.example.m](paths.example.m) to `paths.m`, edit it for your
