@@ -3,8 +3,9 @@ close all force
 clc
 
 %% Define the root directory to search for patient folders
-rootDir = "D:\OneDrive - unizar.es\DOCTORADO\1_TFGs\user\medicina_personalizada\REGISTROS_COMPLETOS\REGISTROS 3 DIAS";
-% rootDir = "C:\Users\user\OneDrive - unizar.es\DOCTORADO\1_TFGs\user\medicina_personalizada\REGISTROS_COMPLETOS\REGISTROS 3 DIAS";
+repoRoot = fileparts(fileparts(mfilename('fullpath'))); addpath(repoRoot);
+p = paths();
+rootDir = p.dataRootT0;
 
 
 patientDirs = dir(rootDir); 

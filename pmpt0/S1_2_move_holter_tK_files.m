@@ -1,8 +1,8 @@
 % filepath: /D:/OneDrive - unizar.es/DOCTORADO/0_WerPerMed/REGISTROS_COMPLETOS/S3_2_move_and_assign_GGIR_files.m
 clear; close all force; clc
 
-src_folder = 'C:\path\to\werpermed\prueba3dias';
-dest_folder = 'D:\OneDrive - unizar.es\DOCTORADO\0_WerPerMed\REGISTROS_COMPLETOS\REGISTROS 3 DIAS\'; % set destination folder
+src_folder  = 'path/to/source';  % EDIT per use
+dest_folder = 'path/to/dest';    % EDIT per use
 
 % Find files matching *_holter.mat and *_tK.mat patterns
 files_holter = dir(fullfile(src_folder, '**', '*_holter.mat'));

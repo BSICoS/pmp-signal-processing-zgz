@@ -10,9 +10,10 @@
 %
 % NB: no hace clearvars (preserva el workspace del caller).
 
-addpath(genpath('D:\OneDrive - unizar.es\UNIVERSIDAD\POSTDOCTORADO\biosigmat'));
-addpath(genpath('C:\Users\user\OneDrive - unizar.es\UNIVERSIDAD\POSTDOCTORADO\biosigmat'));
-addpath(genpath('C:\Users\user\OneDrive - unizar.es\UNIVERSIDAD\DOCTORADO\biomedical-signal-processing'));
+repoRoot = fileparts(fileparts(mfilename('fullpath'))); addpath(repoRoot);
+p = paths();
+addpath(genpath(p.biosigmat));
+addpath(genpath(p.biomedSigProc));
 addpath('lib');
 
 if ~exist('examples','var') || isempty(examples)

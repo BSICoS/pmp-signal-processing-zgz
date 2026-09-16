@@ -26,7 +26,7 @@ for p = 15
 
     % % % Load the data
     % % % load('ppg_pruebas_diff.mat');
-    % % load("REGISTROS 3 DIAS\SUBJ01\SUBJ01_reloj.mat");
+    % % load("REGISTROS 3 DIAS/<subjID>/<subjID>_reloj.mat");
 
     % Plot the raw PPG signal
     % figure;

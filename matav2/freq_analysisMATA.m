@@ -1,7 +1,4 @@
-% load('D:\OneDrive - unizar.es\DOCTORADO\0_WerPerMed\prueba_MATA02\registros\MATA00-1002663-20241129-114905.mat')
-% load('D:\OneDrive - unizar.es\DOCTORADO\0_WerPerMed\prueba_MATA02\registros\MATA00-2000822-20241202-144225.mat')
-% load('D:\OneDrive - unizar.es\DOCTORADO\0_WerPerMed\prueba_MATA02\newFW_prueba2\MATA00-2000822-20250120-113844.mat')
-% load('C:\Users\user\OneDrive - unizar.es\DOCTORADO\0_WerPerMed\prueba_MATA02\newFW_prueba2\MATA00-2000822-20250120-113844.mat')
+% load('path/to/<recording>.mat')   % EDIT: registro a analizar
 
 fs = 25.6;
 

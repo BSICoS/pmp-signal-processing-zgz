@@ -236,6 +236,7 @@ def process_file(source_file, source_base_dir, dest_base_dir):
 # --- MAIN EXECUTION BLOCK ---
 
 if __name__ == "__main__":
+    # EDIT per machine
     source_base_dir = r"F:\PMP_T1"
     dest_base_dir = r"C:\path\to\PMP_T1"
     

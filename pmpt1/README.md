@@ -73,3 +73,5 @@ pipeline changes.
   a fresh clone.
 - Several scripts read from the group NAS (`\\smb2.i3a.es\...`) and abort early
   if the share is not mounted.
+- Toolbox paths (`biosigmat`, `biomedical-signal-processing`) come from
+  `paths.m` at the repo root — copy `paths.example.m` → `paths.m` and edit.

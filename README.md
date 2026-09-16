@@ -14,6 +14,7 @@ multi-device wearable recordings into heart-rate (HR), heart-rate-variability
 | [matav2/](matav2/) | Development & validation of the **MATA v2 firmware** processing: PPG jump correction, robust spectral HR, comparison against MATA v1 and a Shimmer ECG reference | [matav2/README.md](matav2/README.md) |
 | [pmpt0/](pmpt0/) | **T0 (baseline) cohort** pipeline: BIN→CSV conversion, Holter ECG → HRV, PPG cleaning → HR/HRV, GGIR activity & sleep bouts | [pmpt0/README.md](pmpt0/README.md) |
 | [pmpt1/](pmpt1/) | **T1 (follow-up) cohort** pipeline: night segmentation, PPG pulse delineation + spectral HR, time-domain HRV sweep, report generation | [pmpt1/README.md](pmpt1/README.md) |
+| [tools/](tools/) | Shared utilities (e.g. the `.BIN` → `.csv` converter) | — |
 
 ## Devices and signals
 
@@ -38,19 +39,26 @@ MATLAB post-processing.
   `peakednessCost`, `delinearECG`).
 - **R** with `GGIR` ≥ 3.2-3 and `GGIRread` ≥ 1.0.4 (≥ 1.0.7 recommended) for
   [pmpt0/WearablePerMed_GGIRproc_PabloA_bin.r](pmpt0/WearablePerMed_GGIRproc_PabloA_bin.r).
-- **Python 3** with `tqdm` (`.BIN` → `.csv` conversion) and
-  `fitparse` + `tzdata` (Garmin `.FIT` import).
+- **Python 3** with `tqdm` (`.BIN` → `.csv` conversion,
+  [tools/bin2csv.py](tools/bin2csv.py)) and `fitparse` + `tzdata` (Garmin
+  `.FIT` import).
 
 ## Data (important)
 
 - **No raw recordings are stored in this repo.** Signals contain subject data
-  and live on the group NAS / OneDrive folders; scripts currently reference
-  them with hard-coded absolute paths that must be adapted per machine.
+  and live on the group NAS / OneDrive folders (`.gitignore` blocks `*.mat`,
+  `*.csv`, `*.edf`, `data/`, …).
+- **Machine-specific paths are centralized in `paths.m`** (not committed):
+  copy [paths.example.m](paths.example.m) to `paths.m`, edit it for your
+  machine, and keep the repo root on the MATLAB path (`pathtool`/`startup.m`).
+  A few legacy scripts still carry inline `rootDir` lines and are migrated
+  incrementally.
 - Each pipeline stage reads the `.mat` files produced by the previous stage and
   appends new variables — see the per-folder READMEs for the execution order.
 - Code comments are mostly in Spanish.
 
 ## License
 
-License pending — contact the authors before reuse. Do not commit or share any
+[MIT](LICENSE) — Copyright (c) 2026 BSICoS Group, I3A / Universidad de
+Zaragoza. The license covers the code only: never commit or share
 patient-derived data.

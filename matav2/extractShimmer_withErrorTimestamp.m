@@ -1,5 +1,5 @@
-% Ruta completa al archivo .mat
-fileName = 'C:\path\to\2025-03-04_18.45.54_DefaultTrial_SD_Session1\DefaultTrial_Session1_Shimmer_68B7_Calibrated_SD.mat';
+% Ruta completa al archivo .mat (EDIT: export local de Consensys)
+fileName = 'path/to/2025-03-04_18.45.54_DefaultTrial_SD_Session1/DefaultTrial_Session1_Shimmer_68B7_Calibrated_SD.mat';
 dataSHIMMER = struct2table(load(fileName));
 
 dateStr = regexp(fileName, '(\d{4}-\d{2}-\d{2}_\d{2}\.\d{2}\.\d{2})', 'match', 'once');

@@ -15,8 +15,9 @@
 % NB: este script NO hace clearvars: cuando se invoca desde run_hrvtd_sweep
 %     u otro wrapper, las variables de iteracion del caller deben sobrevivir.
 
-addpath(genpath('D:\OneDrive - unizar.es\UNIVERSIDAD\POSTDOCTORADO\biosigmat'));
-addpath(genpath('C:\Users\user\OneDrive - unizar.es\UNIVERSIDAD\POSTDOCTORADO\biosigmat'));
+repoRoot = fileparts(fileparts(mfilename('fullpath'))); addpath(repoRoot);
+p = paths();
+addpath(genpath(p.biosigmat));
 addpath('lib');
 
 if ~exist('datasetVersion', 'var') || isempty(datasetVersion)

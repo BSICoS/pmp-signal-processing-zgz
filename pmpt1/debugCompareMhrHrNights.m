@@ -2,8 +2,9 @@ clear;
 close all force;
 clc;
 
-addpath(genpath('D:\OneDrive - unizar.es\UNIVERSIDAD\POSTDOCTORADO\biosigmat'));
-addpath(genpath('C:\Users\user\OneDrive - unizar.es\UNIVERSIDAD\POSTDOCTORADO\biosigmat'));
+repoRoot = fileparts(fileparts(mfilename('fullpath'))); addpath(repoRoot);
+p = paths();
+addpath(genpath(p.biosigmat));
 addpath('lib');
 
 datasetVersion = 'v2_1';

@@ -5,9 +5,9 @@ clc
 %%
 
 % Define the root directory to search for patient folders
-rootDir = "C:\path\to\PMP_T1_biosignals";
-% rootDir = "C:\Users\user\OneDrive - unizar.es\DOCTORADO\0_WerPerMed\REGISTROS_COMPLETOS\REGISTROS 3 DIAS";
-rootDir = "D:\werpermed\PMP_T1";
+repoRoot = fileparts(fileparts(mfilename('fullpath'))); addpath(repoRoot);
+p = paths();
+rootDir = p.dataRootT1;
 
 % Get a list of all subdirectories (patients) in the root directory
 patientDirs = dir(rootDir);

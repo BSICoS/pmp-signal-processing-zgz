@@ -3,7 +3,9 @@
 
 clear; close all force; clc
 
-addpath(genpath('C:\Users\user\OneDrive - unizar.es\DOCTORADO\biomedical-signal-processing'),'-begin');
+repoRoot = fileparts(fileparts(mfilename('fullpath'))); addpath(repoRoot);
+p = paths();
+addpath(genpath(p.biomedSigProc),'-begin');
 % segment_length = seconds(10);
 
 rootDir = "REGISTROS 3 DIAS";

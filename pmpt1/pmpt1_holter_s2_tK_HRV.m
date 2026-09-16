@@ -7,7 +7,9 @@ addpath(genpath(fullfile(rootPath, 'biomedical-signal-processing')),'-begin');
 
 
 %% Define the root directory to search for patient folders
-rootDir = "C:\path\to\PMP_T1_biosignals"; 
+repoRoot = fileparts(fileparts(mfilename('fullpath'))); addpath(repoRoot);
+p = paths();
+rootDir = p.dataRootT1;
 
 % Get a list of all subdirectories (patients) in the root directory
 patientDirs = dir(rootDir);

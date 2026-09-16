@@ -1,8 +1,8 @@
 clear;% close all force; clc
 
-addpath(genpath('D:\OneDrive - unizar.es\DOCTORADO\biomedical-signal-processing'));
-addpath(genpath('C:\Users\user\OneDrive - unizar.es\DOCTORADO\biomedical-signal-processing'));
-addpath(genpath('C:\Users\user\OneDrive - unizar.es\UNIVERSIDAD\DOCTORADO\biomedical-signal-processing'));
+repoRoot = fileparts(fileparts(mfilename('fullpath'))); addpath(repoRoot);
+p = paths();
+addpath(genpath(p.biomedSigProc));
 
 %% Define the root directory to search for patient folders
 rootDir =  "REGISTROS 3 DIAS";

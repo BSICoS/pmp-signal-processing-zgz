@@ -3,9 +3,9 @@ clear
 % close all force
 % clc
 
-currentPath = pwd; rootIndex = strfind(currentPath, 'OneDrive - unizar.es'); rootPath = fullfile(currentPath(1:rootIndex + length('OneDrive - unizar.es') - 1), 'DOCTORADO');
-addpath(genpath(fullfile(rootPath, 'biomedical-signal-processing')));
-addpath(genpath('C:\Users\user\OneDrive - unizar.es\UNIVERSIDAD\DOCTORADO\biomedical-signal-processing'));
+repoRoot = fileparts(fileparts(mfilename('fullpath'))); addpath(repoRoot);
+p = paths();
+addpath(genpath(p.biomedSigProc));
 
 dataDir = 'registros';
 mataFiles = dir(fullfile(dataDir,'*.mat'));

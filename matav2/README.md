@@ -37,5 +37,6 @@ The v2 PPG exhibits two artefacts addressed here: coarse **gain jumps**
 ## Notes
 
 - `dataDir` is edited inline per experiment (`registros`, `newFW_prueba*`, …).
-- Requires the `biomedical-signal-processing` toolbox on the MATLAB path (the
-  scripts `addpath` it from sibling OneDrive locations).
+- Toolbox paths come from `paths.m` at the repo root (copy
+  `paths.example.m` → `paths.m`); a few scripts still auto-detect the
+  OneDrive `biomedical-signal-processing` folder from `pwd`.

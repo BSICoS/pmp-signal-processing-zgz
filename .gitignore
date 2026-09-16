@@ -1,0 +1,26 @@
+# Local machine configuration — copy paths.example.m to paths.m and edit
+paths.m
+
+# MATLAB
+*.asv
+*.m~
+slprj/
+
+# Data and generated artifacts — never commit recordings or derived signals
+*.mat
+*.fig
+*.bin
+*.BIN
+*.csv
+*.edf
+*.fit
+data/
+ggir_analysis/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# OS
+Thumbs.db
+.DS_Store

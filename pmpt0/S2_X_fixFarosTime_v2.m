@@ -9,8 +9,6 @@ addpath(genpath(fullfile(rootPath, 'biomedical-signal-processing')),'-begin');
 %% Define the root directory to search for patient folders
 rootDir = "REGISTROS 3 DIAS";
 
-% rootDir = "C:\path\to\werpermed\prueba3dias";
-
 % Get a list of all subdirectories (patients) in the root directory
 patientDirs = dir(rootDir);
 patientDirs = patientDirs([patientDirs.isdir]); % Keep only directories

@@ -13,7 +13,7 @@ stage's files.
 
 | Script | Purpose |
 |---|---|
-| [bin2csv.py](bin2csv.py) | Converts the MATA proprietary `.BIN` format (`MDTC` / `MDTCPACK` packets) to CSV. Requires `tqdm`. |
+| [tools/bin2csv.py](../tools/bin2csv.py) | Converts the MATA proprietary `.BIN` format (`MDTC` / `MDTCPACK` packets) to CSV. Requires `tqdm`. |
 | [WearablePerMed_GGIRproc_PabloA_bin.r](WearablePerMed_GGIRproc_PabloA_bin.r) | Runs GGIR (modes 1–5) directly on `.BIN` via `GGIRread::readParmayMatrix`. Thresholds lig/mod/vig = 45/100/400 mg; `boutdur = 1` with 60 s aggregation — strict bout detection is delegated to MATLAB (S3). Requires GGIR ≥ 3.2-3, GGIRread ≥ 1.0.4. |
 | [S0_read_holter_all.m](S0_read_holter_all.m) | Concatenates the Holter `.EDF` segments → `<id>_holter.mat` (ECG @ 1 kHz, UTC timestamps from the EDF header). |
 | [S0_read_mata_all.m](S0_read_mata_all.m) | Reads the wrist CSV → `<id>_reloj.mat` (`PPG`, `HR`, `ACC`, `GYR`, `Tbody`, `Tamb`, `timeStamp`; fs = 25.6 Hz). |
@@ -47,6 +47,8 @@ stage's files.
 
 ## Notes
 
-- Root data paths are edited inline at the top of each script (`rootDir`).
+- Data roots and toolbox paths come from `paths.m` at the repo root (copy
+  `paths.example.m` → `paths.m`); the default T0 data root is the relative
+  `"REGISTROS 3 DIAS"` folder.
 - Requires `biomedical-signal-processing` on the MATLAB path (and the ECG SNR
   toolbox under `SNR_ECG/toolbox/` for S1_0).
